@@ -90,7 +90,7 @@
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
-<div class="mkt" data-generated="2026-10-24T13:47:50Z">
+<div class="mkt" data-generated="2026-10-24T13:52:34Z">
   <div class="board" role="region" aria-labelledby="refined-h">
     <div class="board-cap">
       <h2 id="refined-h"><span class="en">Refined products</span><span class="es">Productos refinados</span></h2>
@@ -148,7 +148,7 @@
   var root=document.documentElement;
   function fmt(){
     var l=root.lang==='es'?'es-ES':'en-US';
-    document.querySelectorAll('.mkt .n').forEach(function(el){
+    document.querySelectorAll('.mkt .n, .mkt-mini .n').forEach(function(el){
       var v=+el.dataset.v, d=+el.dataset.d;
       var s=new Intl.NumberFormat(l,{minimumFractionDigits:d,maximumFractionDigits:d,useGrouping:true}).format(Math.abs(v));
       el.textContent=(el.dataset.s&&v>0?'+':'')+(v<0?'-':'')+s;

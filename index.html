@@ -36,6 +36,35 @@
   "description": "Consulting and supply firm: Oil & Gas arbitrage, brokerage and trading; procurement and supply chain strategic management; project management consulting with applied AI."
 }
 </script>
+<!-- markets-mini-css:start -->
+<style>
+.hero .wrap.has-mkt{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,370px);column-gap:56px;align-items:start}
+.hero .wrap.has-mkt>*{grid-column:1}
+.hero .wrap.has-mkt>.mkt-mini{grid-column:2;grid-row:1/span 6;align-self:center}
+.mkt-mini{--muted-on-ink:#CBBFA9;--rule-on-ink:#4A4138;position:relative;z-index:1;background:var(--ink);color:var(--ivory);border-radius:6px;padding:22px 24px 18px;box-shadow:0 24px 60px rgba(34,30,26,.18)}
+.mkt-mini .mm-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.mkt-mini .mm-title{font-family:'Libre Caslon Text',serif;font-size:20px;line-height:1.3;margin:0;color:var(--ivory)}
+.mkt-mini .mm-unit{font-size:11px;color:var(--muted-on-ink)}
+.mkt-mini dl{margin:0}
+.mkt-mini .mm-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:baseline;column-gap:12px;padding:9px 0;border-top:1px solid var(--rule-on-ink);font-variant-numeric:tabular-nums}
+.mkt-mini dt{font-size:13px;color:var(--ivory);line-height:1.35}
+.mkt-mini dt small{display:block;font-size:11px;color:var(--muted-on-ink)}
+.mkt-mini dd{margin:0;text-align:right}
+.mkt-mini .mm-v{font-family:'Libre Caslon Text',serif;font-size:21px;color:var(--brass);line-height:1}
+.mkt-mini .mm-c{font-size:12px;min-width:4.6em}
+.mkt-mini .chg{margin:0;white-space:nowrap}
+.mkt-mini .chg.up{color:#E3C78F}
+.mkt-mini .chg.dn{color:#D9A487}
+.mkt-mini .na{color:var(--muted-on-ink)}
+.mkt-mini .mm-foot{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--rule-on-ink);font-size:11px;line-height:1.5;color:var(--muted-on-ink)}
+.mkt-mini .mm-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;color:var(--brass);border-bottom:1px solid var(--brass)}
+.mkt-mini .mm-link:hover{color:var(--ivory);border-color:var(--ivory)}
+@media (max-width:980px){
+  .hero .wrap.has-mkt{display:block}
+  .mkt-mini{margin-top:40px;max-width:480px}
+}
+</style>
+<!-- markets-mini-css:end -->
 </head>
 <body>
 
@@ -58,7 +87,7 @@
 <main>
 
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap has-mkt">
     <img class="mark" src="assets/img/rc-mark-t.png" alt="" aria-hidden="true">
     <p class="eyebrow"><span class="en">Miami · Florida · Est. 2021</span><span class="es">Miami · Florida · Fund. 2021</span></p>
     <div class="rule"></div>
@@ -73,7 +102,10 @@
     <div class="cta-row">
       <a class="btn btn-solid" href="#capabilities"><span class="en">Explore our capabilities</span><span class="es">Conozca nuestras capacidades</span></a>
       <a class="btn btn-line" href="contact.html"><span class="en">Start a conversation</span><span class="es">Inicie una conversación</span></a>
-    </div>
+    </div><!-- markets-mini:start -->
+<aside class="mkt-mini" aria-labelledby="mm-title"><div class="mm-head"><h2 class="mm-title" id="mm-title"><span class="en">Market prices</span><span class="es">Precios de mercado</span></h2><span class="mm-unit"><span class="en">change vs previous</span><span class="es">variación</span></span></div><dl><div class="mm-row"><dt><span class="en">Brent</span><span class="es">Brent</span><small><span class="en">crude, USD/bbl</span><span class="es">crudo, USD/bbl</span></small></dt><dd class="mm-v"><span class="n" data-v="115.220000" data-d="2">115.22</span></dd><dd class="mm-c"><span class="chg dn"><span class="n" data-v="-3.029793" data-d="2" data-s="1">-3.03</span>%</span></dd></div><div class="mm-row"><dt><span class="en">WTI</span><span class="es">WTI</span><small><span class="en">crude, USD/bbl</span><span class="es">crudo, USD/bbl</span></small></dt><dd class="mm-v"><span class="n" data-v="107.890000" data-d="2">107.89</span></dd><dd class="mm-c"><span class="chg dn"><span class="n" data-v="-1.927098" data-d="2" data-s="1">-1.93</span>%</span></dd></div><div class="mm-row"><dt><span class="en">Jet fuel</span><span class="es">Jet</span><small><span class="en">Houston, USD/bbl</span><span class="es">Houston, USD/bbl</span></small></dt><dd class="mm-v"><span class="n" data-v="194.544000" data-d="2">194.54</span></dd><dd class="mm-c"><span class="chg up"><span class="n" data-v="1.423254" data-d="2" data-s="1">+1.42</span>%</span></dd></div><div class="mm-row"><dt><span class="en">Diesel 10 ppm</span><span class="es">Diésel 10 ppm</span><small><span class="en">Rotterdam, USD/t</span><span class="es">Rotterdam, USD/t</span></small></dt><dd class="mm-v"><span class="n" data-v="1454.500000" data-d="2">1,454.50</span></dd><dd class="mm-c"><span class="chg up"><span class="n" data-v="1.060000" data-d="2" data-s="1">+1.06</span>%</span></dd></div><div class="mm-row"><dt><span class="en">Gasoil 10 ppm</span><span class="es">Gasóleo 10 ppm</span><small><span class="en">Fujairah, USD/bbl</span><span class="es">Fujairah, USD/bbl</span></small></dt><dd class="mm-v"><span class="n" data-v="180.130000" data-d="2">180.13</span></dd><dd class="mm-c"><span class="chg dn"><span class="n" data-v="-1.650000" data-d="2" data-s="1">-1.65</span>%</span></dd></div><div class="mm-row"><dt><span class="en">Natural gas</span><span class="es">Gas natural</span><small><span class="en">Henry Hub, USD/MMBtu</span><span class="es">Henry Hub, USD/MMBtu</span></small></dt><dd class="mm-v"><span class="n" data-v="3.100000" data-d="2">3.10</span></dd><dd class="mm-c"><span class="chg dn"><span class="n" data-v="-5.487805" data-d="2" data-s="1">-5.49</span>%</span></dd></div></dl><p class="mm-foot"><span class="en">EIA close 20 Oct 2026. Rotterdam and Fujairah: CommodityScope indicative, 22 Oct 2026. Reference prices, not an offer.</span><span class="es">Cierre EIA del 20 oct 2026. Rotterdam y Fujairah: indicativo de CommodityScope, 22 oct 2026. Precios de referencia, no son una oferta.</span></p><a class="mm-link" href="markets.html"><span class="en">See all market prices</span><span class="es">Ver todos los precios</span></a></aside>
+<!-- markets-mini:end -->
+
   </div>
 </section>
 
@@ -200,5 +232,22 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<!-- markets-mini-js:start -->
+<script>
+(function(){
+  var root=document.documentElement;
+  function fmt(){
+    var l=root.lang==='es'?'es-ES':'en-US';
+    document.querySelectorAll('.mkt .n, .mkt-mini .n').forEach(function(el){
+      var v=+el.dataset.v, d=+el.dataset.d;
+      var s=new Intl.NumberFormat(l,{minimumFractionDigits:d,maximumFractionDigits:d,useGrouping:true}).format(Math.abs(v));
+      el.textContent=(el.dataset.s&&v>0?'+':'')+(v<0?'-':'')+s;
+    });
+  }
+  fmt();
+  new MutationObserver(fmt).observe(root,{attributes:true,attributeFilter:['lang']});
+})();
+</script>
+<!-- markets-mini-js:end -->
 </body>
 </html>
