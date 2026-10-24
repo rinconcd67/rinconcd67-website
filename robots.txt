@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.rinconcd67-consulting-supply-llc.com/sitemap.xml
