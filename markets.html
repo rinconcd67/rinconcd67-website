@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market prices | RINCONCD67 Consulting &amp; Supply LLC</title>
+<meta name="description" content="Reference prices for jet fuel and diesel in Houston, Rotterdam and Fujairah, Brent, WTI, OPEC basket and Merey crude, and natural gas in the US, Europe and Asia.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.mkt{--muted-on-ink:#CBBFA9;--rule-on-ink:#4A4138}
+.mkt .board{background:var(--ink);color:var(--ivory);border-radius:6px;overflow:hidden}
+.mkt .board-cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:22px 24px 6px}
+.mkt .board-cap h2{font-family:'Libre Caslon Text',serif;font-weight:400;font-size:21px;line-height:1.3}
+.mkt .board-cap p{font-size:13px;color:var(--muted-on-ink);margin:0}
+.mkt table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin:0}
+.mkt th,.mkt td{text-align:left;vertical-align:top;padding:18px 24px;background:none;line-height:1.5}
+.mkt thead th{border-bottom:1px solid var(--rule-on-ink);font-weight:500}
+.mkt tbody tr+tr th,.mkt tbody tr+tr td{border-top:1px solid var(--rule-on-ink)}
+.mkt .hub{display:block;font-size:15px;color:var(--ivory)}
+.mkt .hub-sub{display:block;font-size:12px;color:var(--muted-on-ink);font-weight:400;margin-top:2px}
+.mkt tbody th{font-weight:500;font-size:14px;color:var(--ivory);width:22%}
+.mkt .px{font-family:'Libre Caslon Text',serif;font-size:32px;line-height:1;color:var(--brass)}
+.mkt .unit{font-size:13px;color:var(--muted-on-ink);margin-left:4px}
+.mkt .sub{display:block;margin-top:8px;font-size:13px;color:var(--muted-on-ink)}
+.mkt .srcline{display:block;margin-top:6px;font-size:12px;color:var(--muted-on-ink)}
+.mkt .board a.src{color:var(--muted-on-ink);border-bottom:1px solid var(--rule-on-ink)}
+.mkt .board a.src:hover{color:var(--brass);border-color:var(--brass)}
+.mkt .ind{font-style:italic}
+.mkt .chg{margin-left:8px;white-space:nowrap}
+.mkt .board .chg.up{color:#E3C78F}
+.mkt .board .chg.dn{color:#D9A487}
+.mkt .na{color:var(--muted-on-ink)}
+.mkt .crudes{margin-top:36px}
+.mkt .crudes h2{font-family:'Libre Caslon Text',serif;font-weight:400;font-size:21px;line-height:1.3;margin:0 0 16px}
+.mkt .crude-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:20px;border-top:1px solid var(--hair)}
+.mkt .crude-list.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mkt .crude{display:flex;flex-direction:column;gap:4px;padding:20px 20px 20px 0;border-bottom:1px solid var(--hair);margin:0}
+.mkt .crude::before{content:none}
+.mkt .cname{font-weight:500;font-size:14px;white-space:nowrap}
+.mkt .cval{font-family:'Libre Caslon Text',serif;font-size:34px;line-height:1.1;color:var(--copper-deep);font-variant-numeric:tabular-nums}
+.mkt .cmeta{font-size:13px;color:var(--stone);font-variant-numeric:tabular-nums;line-height:1.5}
+.mkt .crude .chg{margin-left:0}
+.mkt .crude .chg.up,.mkt .crude .chg.dn{color:var(--ink-soft)}
+.mkt .crude a.src{font-size:12px;color:var(--stone);border-bottom:1px solid var(--hair);align-self:flex-start}
+.mkt .notes{margin-top:32px;display:grid;gap:10px;font-size:13px;color:var(--stone);max-width:90ch;line-height:1.6}
+.mkt .notes p{margin:0}
+.mkt .notes strong{color:var(--ink-soft);font-weight:500}
+@media (max-width:760px){
+  .mkt .crude-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mkt .crude-list.g3{grid-template-columns:1fr}
+  .mkt .cval{font-size:28px}
+  .mkt thead{display:none}
+  .mkt table,.mkt tbody,.mkt tr,.mkt th,.mkt td{display:block;width:100%}
+  .mkt tbody tr{padding:6px 0}
+  .mkt tbody tr+tr{border-top:1px solid var(--rule-on-ink)}
+  .mkt tbody tr+tr th,.mkt tbody tr+tr td{border-top:0}
+  .mkt tbody th{padding:16px 20px 4px;font-family:'Libre Caslon Text',serif;font-size:18px;font-weight:400}
+  .mkt td{padding:10px 20px}
+  .mkt td::before{content:attr(data-label);display:block;font-size:12px;color:var(--muted-on-ink);margin-bottom:4px}
+  .mkt .board-cap{padding:20px 20px 4px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/img/rc-mark-t.png" alt="" class="brand-mark">RINCON<em>CD67</em><small class="en">CONSULTING &amp; SUPPLY LLC</small><small class="es">CONSULTING &amp; SUPPLY LLC</small></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    <nav class="main" id="mainNav">
+      <a href="trading.html"><span class="en">Trading</span><span class="es">Trading</span></a>
+      <a href="markets.html" aria-current="page"><span class="en">Markets</span><span class="es">Mercados</span></a>
+      <a href="supply-chain.html"><span class="en">Supply chain</span><span class="es">Cadena de suministro</span></a>
+      <a href="ai-consulting.html"><span class="en">Applied AI</span><span class="es">IA aplicada</span></a>
+      <a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
+      <a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a>
+      <button class="lang-btn" id="langBtn" type="button">ES</button>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-hero"><div class="wrap">
+  <p class="eyebrow"><span class="en">Market data</span><span class="es">Datos de mercado</span></p>
+  <div class="rule" style="width:64px;height:3px;background:var(--copper);margin-bottom:30px"></div>
+  <h1><span class="en">Market prices</span><span class="es">Precios de mercado</span></h1>
+  <p class="lede"><span class="en">Refined products in three trading hubs, and the crude oil and natural gas benchmarks we follow every day.</span><span class="es">Productos refinados en tres hubs de comercio, y los crudos y el gas natural de referencia que seguimos cada día.</span></p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="mkt" data-generated="2026-10-24T13:43:34Z">
+  <div class="board" role="region" aria-labelledby="refined-h">
+    <div class="board-cap">
+      <h2 id="refined-h"><span class="en">Refined products</span><span class="es">Productos refinados</span></h2>
+      <p><span class="en">USD per barrel and per metric ton, change vs previous assessment</span><span class="es">USD por barril y por tonelada métrica, variación frente a la valoración anterior</span></p>
+    </div>
+    <table>
+      <thead><tr><th scope="col"><span class="hub-sub"><span class="en">Product</span><span class="es">Producto</span></span></th><th scope="col"><span class="hub"><span class="en">Houston / US Gulf</span><span class="es">Houston / Golfo de EE. UU.</span></span><span class="hub-sub"><span class="en">Spot, FOB</span><span class="es">Spot, FOB</span>, <span class="en">20 Oct 2026</span><span class="es">20 oct 2026</span></span></th><th scope="col"><span class="hub"><span class="en">Rotterdam (ARA)</span><span class="es">Rotterdam (ARA)</span></span><span class="hub-sub"><span class="en">FOB barge</span><span class="es">FOB barcaza</span>, <span class="en">22 Oct 2026</span><span class="es">22 oct 2026</span></span></th><th scope="col"><span class="hub"><span class="en">Fujairah</span><span class="es">Fujairah</span></span><span class="hub-sub"><span class="en">FOB cargo</span><span class="es">FOB cargamento</span>, <span class="en">22 Oct 2026</span><span class="es">22 oct 2026</span></span></th></tr></thead>
+      <tbody><tr><th scope="row"><span class="en">Jet fuel / kerosene</span><span class="es">Jet / queroseno</span></th><td data-label="Houston" aria-label="Houston / US Gulf, Jet fuel / kerosene"><span class="px"><span class="n" data-v="194.544000" data-d="2">194.54</span></span><span class="unit">/bbl</span><span class="sub"><span class="n" data-v="1533.006720" data-d="2">1,533.01</span> /t <span class="chg up"><span class="n" data-v="1.423254" data-d="2" data-s="1">+1.42</span>%</span></span><span class="srcline"><a class="src" href="https://fred.stlouisfed.org/series/DJFUELUSGULF" target="_blank" rel="noopener">EIA</a></span></td><td data-label="Rotterdam (ARA)" aria-label="Rotterdam (ARA), Jet fuel / kerosene"><span class="px"><span class="n" data-v="208.500000" data-d="2">208.50</span></span><span class="unit">/bbl</span><span class="sub"><span class="n" data-v="1643.000000" data-d="2">1,643.00</span> /t <span class="chg up"><span class="n" data-v="1.440000" data-d="2" data-s="1">+1.44</span>%</span></span><span class="srcline"><a class="src" href="https://commodityscope.com/prices/ara-jet-fuel-barge" target="_blank" rel="noopener">CommodityScope</a> <span class="ind"><span class="en">indicative</span><span class="es">indicativo</span></span></span></td><td data-label="Fujairah" aria-label="Fujairah, Jet fuel / kerosene"><span class="px"><span class="n" data-v="180.630000" data-d="2">180.63</span></span><span class="unit">/bbl</span><span class="sub"><span class="n" data-v="1423.360000" data-d="2">1,423.36</span> /t <span class="chg dn"><span class="n" data-v="-1.210000" data-d="2" data-s="1">-1.21</span>%</span></span><span class="srcline"><a class="src" href="https://commodityscope.com/prices/fujairah-jet-kerosene" target="_blank" rel="noopener">CommodityScope</a> <span class="ind"><span class="en">indicative</span><span class="es">indicativo</span></span></span></td></tr><tr><th scope="row"><span class="en">Diesel / gasoil 10 ppm</span><span class="es">Diésel / gasóleo 10 ppm</span></th><td data-label="Houston" aria-label="Houston / US Gulf, Diesel / gasoil 10 ppm"><span class="px"><span class="n" data-v="208.404000" data-d="2">208.40</span></span><span class="unit">/bbl</span><span class="sub"><span class="n" data-v="1552.609800" data-d="2">1,552.61</span> /t <span class="chg dn"><span class="n" data-v="-0.120773" data-d="2" data-s="1">-0.12</span>%</span></span><span class="srcline"><a class="src" href="https://fred.stlouisfed.org/series/DDFUELUSGULF" target="_blank" rel="noopener">EIA</a></span></td><td data-label="Rotterdam (ARA)" aria-label="Rotterdam (ARA), Diesel / gasoil 10 ppm"><span class="px"><span class="n" data-v="195.230000" data-d="2">195.23</span></span><span class="unit">/bbl</span><span class="sub"><span class="n" data-v="1454.500000" data-d="2">1,454.50</span> /t <span class="chg up"><span class="n" data-v="1.060000" data-d="2" data-s="1">+1.06</span>%</span></span><span class="srcline"><a class="src" href="https://commodityscope.com/prices/ara-diesel-10ppm-barge" target="_blank" rel="noopener">CommodityScope</a> <span class="ind"><span class="en">indicative</span><span class="es">indicativo</span></span></span></td><td data-label="Fujairah" aria-label="Fujairah, Diesel / gasoil 10 ppm"><span class="px"><span class="n" data-v="180.130000" data-d="2">180.13</span></span><span class="unit">/bbl</span><span class="sub"><span class="n" data-v="1341.970000" data-d="2">1,341.97</span> /t <span class="chg dn"><span class="n" data-v="-1.650000" data-d="2" data-s="1">-1.65</span>%</span></span><span class="srcline"><a class="src" href="https://commodityscope.com/prices/fujairah-10ppm-gasoil" target="_blank" rel="noopener">CommodityScope</a> <span class="ind"><span class="en">indicative</span><span class="es">indicativo</span></span></span></td></tr></tbody>
+    </table>
+  </div>
+  <div class="crudes" role="region" aria-labelledby="crude-h">
+    <h2 id="crude-h"><span class="en">Crude oil</span><span class="es">Crudo</span></h2>
+    <ul class="crude-list"><li class="crude"><span class="cname"><span class="en">Brent</span><span class="es">Brent</span></span><span class="cval"><span class="n" data-v="115.220000" data-d="2">115.22</span></span><span class="cmeta">USD/bbl, <span class="en">20 Oct 2026</span><span class="es">20 oct 2026</span></span><span class="cmeta"><span class="chg dn"><span class="n" data-v="-3.029793" data-d="2" data-s="1">-3.03</span>%</span> <span class="en">vs previous close</span><span class="es">frente al cierre anterior</span></span><a class="src" href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">EIA</a></li><li class="crude"><span class="cname"><span class="en">WTI</span><span class="es">WTI</span></span><span class="cval"><span class="n" data-v="107.890000" data-d="2">107.89</span></span><span class="cmeta">USD/bbl, <span class="en">20 Oct 2026</span><span class="es">20 oct 2026</span></span><span class="cmeta"><span class="chg dn"><span class="n" data-v="-1.927098" data-d="2" data-s="1">-1.93</span>%</span> <span class="en">vs previous close</span><span class="es">frente al cierre anterior</span></span><a class="src" href="https://fred.stlouisfed.org/series/DCOILWTICO" target="_blank" rel="noopener">EIA</a></li><li class="crude"><span class="cname"><span class="en">OPEC basket</span><span class="es">Cesta OPEP</span></span><span class="cval"><span class="n" data-v="86.440000" data-d="2">86.44</span></span><span class="cmeta">USD/bbl, <span class="en">August 2026 average</span><span class="es">promedio de agosto 2026</span></span><span class="cmeta"><span class="chg up"><span class="n" data-v="4.157127" data-d="2" data-s="1">+4.16</span>%</span> <span class="en">vs previous month</span><span class="es">frente al mes anterior</span></span><a class="src" href="https://www.opec.org/opec_web/en/publications/338.htm" target="_blank" rel="noopener"><span class="en">OPEC</span><span class="es">OPEP</span></a></li><li class="crude"><span class="cname"><span class="en">Merey 16</span><span class="es">Merey 16</span></span><span class="cval"><span class="n" data-v="76.820000" data-d="2">76.82</span></span><span class="cmeta">USD/bbl, <span class="en">August 2026 average</span><span class="es">promedio de agosto 2026</span></span><span class="cmeta"><span class="chg up"><span class="n" data-v="14.043943" data-d="2" data-s="1">+14.04</span>%</span> <span class="en">vs previous month</span><span class="es">frente al mes anterior</span></span><a class="src" href="https://www.opec.org/opec_web/en/publications/338.htm" target="_blank" rel="noopener"><span class="en">OPEC</span><span class="es">OPEP</span></a></li></ul>
+  </div>
+  <div class="crudes" role="region" aria-labelledby="gas-h">
+    <h2 id="gas-h"><span class="en">Natural gas</span><span class="es">Gas natural</span></h2>
+    <ul class="crude-list g3"><li class="crude"><span class="cname"><span class="en">Henry Hub, US</span><span class="es">Henry Hub, EE. UU.</span></span><span class="cval"><span class="n" data-v="3.100000" data-d="2">3.10</span></span><span class="cmeta">USD/MMBtu, <span class="en">20 Oct 2026</span><span class="es">20 oct 2026</span></span><span class="cmeta"><span class="chg dn"><span class="n" data-v="-5.487805" data-d="2" data-s="1">-5.49</span>%</span> <span class="en">vs previous close</span><span class="es">frente al cierre anterior</span></span><a class="src" href="https://fred.stlouisfed.org/series/DHHNGSP" target="_blank" rel="noopener">EIA</a></li><li class="crude"><span class="cname"><span class="en">TTF, Europe</span><span class="es">TTF, Europa</span></span><span class="cval"><span class="n" data-v="25.494000" data-d="2">25.49</span></span><span class="cmeta">USD/MMBtu, <span class="en">September 2026 average</span><span class="es">promedio de septiembre 2026</span></span><span class="cmeta"><span class="chg up"><span class="n" data-v="21.852595" data-d="2" data-s="1">+21.85</span>%</span> <span class="en">vs previous month</span><span class="es">frente al mes anterior</span></span><a class="src" href="https://fred.stlouisfed.org/series/PNGASEUUSDM" target="_blank" rel="noopener"><span class="en">IMF</span><span class="es">FMI</span></a></li><li class="crude"><span class="cname"><span class="en">LNG, Asia (Japan)</span><span class="es">GNL, Asia (Japón)</span></span><span class="cval"><span class="n" data-v="26.637000" data-d="2">26.64</span></span><span class="cmeta">USD/MMBtu, <span class="en">September 2026 average</span><span class="es">promedio de septiembre 2026</span></span><span class="cmeta"><span class="chg up"><span class="n" data-v="20.868500" data-d="2" data-s="1">+20.87</span>%</span> <span class="en">vs previous month</span><span class="es">frente al mes anterior</span></span><a class="src" href="https://fred.stlouisfed.org/series/PNGASJPUSDM" target="_blank" rel="noopener"><span class="en">IMF</span><span class="es">FMI</span></a></li></ul>
+  </div>
+  <div class="notes">
+    <p><span class="en"><strong>Sources.</strong> Houston, Brent, WTI and Henry Hub natural gas: U.S. Energy Information Administration (EIA) spot prices, via FRED. Rotterdam and Fujairah: CommodityScope indicative assessments (<a href="https://commodityscope.com/prices/ara-jet-fuel-barge" target="_blank" rel="noopener">ara-jet-fuel-barge</a>, <a href="https://commodityscope.com/prices/fujairah-jet-kerosene" target="_blank" rel="noopener">fujairah-jet-kerosene</a>, <a href="https://commodityscope.com/prices/ara-diesel-10ppm-barge" target="_blank" rel="noopener">ara-diesel-10ppm-barge</a>, <a href="https://commodityscope.com/prices/fujairah-10ppm-gasoil" target="_blank" rel="noopener">fujairah-10ppm-gasoil</a>). OPEC basket and Merey 16: OPEC Monthly Oil Market Report, September 2026, monthly averages. Europe TTF and Asia LNG: International Monetary Fund (IMF) primary commodity prices, via FRED, monthly averages. Metric ton conversions use 7.88 bbl/t for jet and 7.45 bbl/t for diesel.</span><span class="es"><strong>Fuentes.</strong> Houston, Brent, WTI y gas natural Henry Hub: precios spot de la Administración de Información Energética de EE. UU. (EIA), vía FRED. Rotterdam y Fujairah: valoraciones indicativas de CommodityScope (<a href="https://commodityscope.com/prices/ara-jet-fuel-barge" target="_blank" rel="noopener">ara-jet-fuel-barge</a>, <a href="https://commodityscope.com/prices/fujairah-jet-kerosene" target="_blank" rel="noopener">fujairah-jet-kerosene</a>, <a href="https://commodityscope.com/prices/ara-diesel-10ppm-barge" target="_blank" rel="noopener">ara-diesel-10ppm-barge</a>, <a href="https://commodityscope.com/prices/fujairah-10ppm-gasoil" target="_blank" rel="noopener">fujairah-10ppm-gasoil</a>). Cesta OPEP y Merey 16: Informe Mensual del Mercado Petrolero de la OPEP, septiembre 2026, promedios mensuales. TTF de Europa y GNL de Asia: precios de materias primas del Fondo Monetario Internacional (FMI), vía FRED, promedios mensuales. La conversión a tonelada usa 7,88 bbl/t para jet y 7,45 bbl/t para diésel.</span></p>
+    <p><span class="en"><strong>Notice.</strong> Reference prices for information only. EIA publishes spot prices with a lag of a few business days. These figures are not an offer, a quotation or investment advice, and actual transactions may take place at different levels.</span><span class="es"><strong>Aviso.</strong> Precios de referencia con fines informativos. La EIA publica los precios spot con unos días hábiles de retraso. Estas cifras no son una oferta, una cotización ni asesoría de inversión, y las operaciones reales pueden cerrarse a otros niveles.</span></p>
+  </div>
+</div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="lock" src="assets/img/logo-dark.png" alt="RINCONCD67 Consulting & Supply LLC">
+        <p><span class="en">Consulting and supply firm registered in the State of Florida, USA.</span><span class="es">Firma de consultoría y suministro registrada en el Estado de Florida, EE. UU.</span></p>
+      </div>
+      <div>
+        <h4><span class="en">Practices</span><span class="es">Prácticas</span></h4>
+        <a href="trading.html"><span class="en">Oil &amp; Gas trading</span><span class="es">Trading Oil &amp; Gas</span></a>
+        <a href="supply-chain.html"><span class="en">Supply chain strategy</span><span class="es">Estrategia de suministro</span></a>
+        <a href="ai-consulting.html"><span class="en">Applied AI consulting</span><span class="es">Consultoría IA aplicada</span></a>
+      </div>
+      <div>
+        <h4><span class="en">Company</span><span class="es">Empresa</span></h4>
+        <a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
+        <a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a>
+        <a href="mailto:info@rinconcd67sa-supply-llc.com">info@rinconcd67sa-supply-llc.com</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 RINCONCD67 Consulting &amp; Supply LLC · 801 Brickell Ave, Suite 800, Miami, FL 33131 · <a href="https://search.sunbiz.org/Inquiry/CorporationSearch/ByDocumentNumber" rel="noopener" target="_blank" style="display:inline;color:#D8CDBB;text-decoration:underline"><span class="en">Florida Division of Corporations — Document No. L21000535155</span><span class="es">Florida Division of Corporations — Documento No. L21000535155</span></a></span>
+      <span><span class="en">All official communications originate exclusively from our corporate domain.</span><span class="es">Toda comunicación oficial se origina exclusivamente desde nuestro dominio corporativo.</span></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  var root=document.documentElement;
+  function fmt(){
+    var l=root.lang==='es'?'es-ES':'en-US';
+    document.querySelectorAll('.mkt .n').forEach(function(el){
+      var v=+el.dataset.v, d=+el.dataset.d;
+      var s=new Intl.NumberFormat(l,{minimumFractionDigits:d,maximumFractionDigits:d,useGrouping:true}).format(Math.abs(v));
+      el.textContent=(el.dataset.s&&v>0?'+':'')+(v<0?'-':'')+s;
+    });
+  }
+  fmt();
+  new MutationObserver(fmt).observe(root,{attributes:true,attributeFilter:['lang']});
+})();
+</script>
+</body>
+</html>
