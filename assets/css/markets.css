@@ -52,6 +52,12 @@
   .mkt .board-cap{padding:20px 20px 4px}
 }
 
+.px-ticker.px-move{overflow:hidden}
+.px-move .px-track{display:flex;width:max-content;animation:px-scroll 60s linear infinite}
+.px-move .px-set{display:flex;gap:28px;padding:10px 28px 10px 0;white-space:nowrap}
+.px-move:hover .px-track,.px-move:focus-within .px-track{animation-play-state:paused}
+@keyframes px-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.px-move .px-track{animation:none}.px-ticker.px-move{overflow-x:auto}}
 .px-ticker{background:var(--ink);overflow-x:auto;scrollbar-width:none}
 .px-ticker .wrap{display:flex;gap:28px;padding-top:10px;padding-bottom:10px;white-space:nowrap}
 .px-tk{display:inline-flex;align-items:baseline;gap:6px;color:#E9E1D3;font-size:13px;font-variant-numeric:tabular-nums}
